@@ -22,5 +22,7 @@ LinkedIn is a Dynamic Website, which means many important information doesn't ap
 
 - [ChromeDriver Setup](https://zwbetz.com/download-chromedriver-binary-and-add-to-your-path-for-automated-functional-testing/)
 
+- [Set PATH variable](https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/) and [another tutorial](https://www.kenst.com/2015/03/including-the-chromedriver-location-in-macos-system-path/)
+
 
 
