@@ -6,13 +6,17 @@ Author: Jinfei Zhu
 
 I become interested in this topic because in a university-wide social event, in the self-introduction part, it looks like everyone's study interests have something related to data analysis, computer science, statistics, and machine learning, Python, R, so on and so on. Of course, I am one of them. Besides this, if you google 'the sexist job in 2021', you will surprisingly (or unsurprisingly?) find that the answer of top 10 search engine results is the same: data scientist (I created a quick snapshot of the search result as a small archive).
 
-[](google-search-result.png)
-
 So I begin to wonder, what's the time trend of the job of data scientist? Does more and more opportunities appear in the data science arear? Do the number of jobs available change evenly across the year, or is there any seasonal trend?  Will there be any annual trend too? For example, due to the pandemic, the job opportunity in 2020 could be less than usual, and 2008 - 2009 was greatly impacted by the Great Depression. Another possible question is When will these titles with new grad / summer intern comes out? 
 
-## Construct my archive
+# Construct my archive
 
-To collect the data for new job openings, the first thing I can come up with is to scrape **LinkedIn**. LinkedIn has been trusted by both job seekers and companies, and has become a formal platform for people to connect. Many new jobs are posted every day and it has a filter to help us find out job positions within certain area and key words. To restrict my search result in a reasonable amount, I use this url to limit my craper result `https://www.linkedin.com/jobs/search/?keywords=data%20scientist&location=Chicago&position=1&pageNum=0`. This url will provide us with the opennings of data scientists in Chicago. The scraping codes can be found at two notebooks in this repository: 1 Static Web Scraping with Requests, and 2 Dynamic Web Scraping with Selenium.
+To collect the data for new job openings, the first thing I can come up with is to scrape **LinkedIn**. LinkedIn has been trusted by both job seekers and companies, and has become a formal platform for people to connect. Many new jobs are posted every day and it has a filter to help us find out job positions within certain area and key words. To restrict my search result in a reasonable amount, I use the following url to limit my craper result.
+
+`https://www.linkedin.com/jobs/search/?keywords=data%20scientist&location=Chicago&position=1&pageNum=0`
+
+This url will provide us with the opennings of data scientists in Chicago. The scraping codes can be found at two notebooks in this repository: [1 Static Web Scraping with Requests](https://github.com/casp-a21/mp1-jinfei1125/blob/main/notebooks/1%20Static%20Web%20Scraping%20with%20Requests.ipynb), and [2 Dynamic Web Scraping with Selenium](https://github.com/casp-a21/mp1-jinfei1125/blob/main/notebooks/2%20Dynamic%20Web%20Scraping%20with%20Selenium.ipynb).
+
+![](archive/chromdriver-screenshot.png)
 
 One problem I encountered in building my archive is that LinkedIn is a Dynamic Website, which means many important information doesn't appear directly in the HTML. So if I just make a simple requests and use BeautifulSoup to parse it, plenty of information is missed. To solve this, I have to use [selenium](https://www.selenium.dev/), which is a tool to automate browsers and it has a [python package](https://selenium-python.readthedocs.io/installation.html). I would also need [Chromedriver](https://chromedriver.chromium.org/home), which could open a window automatically and mimic human's browsing habits.
 
