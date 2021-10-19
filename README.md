@@ -20,6 +20,7 @@ This url will provide us with the opennings of data scientists in Chicago. The s
 
 One problem I encountered in building my archive is that LinkedIn is a Dynamic Website, which means many important information doesn't appear directly in the HTML. So if I just make a simple requests and use BeautifulSoup to parse it, plenty of information is missed. To solve this, I have to use [selenium](https://www.selenium.dev/), which is a tool to automate browsers and it has a [python package](https://selenium-python.readthedocs.io/installation.html). I would also need [Chromedriver](https://chromedriver.chromium.org/home), which could open a window automatically and mimic human's browsing habits.
 
+The archives I created are stored in the [archive](https://github.com/casp-a21/mp1-jinfei1125/tree/main/archive) folder in this github repository. `title_name` stores the company and title names on Oct 17, 2021 and `title_name_2.csv` stores the data on Oct 18, 2021.
 
 # Archive Evaluation
 
