@@ -1,4 +1,4 @@
-# Mini Project 1: The Sexist Job in 2021: Data Science
+# Mini Project 1: The Rise of Data Science in the Job Market
 
 Author: Jinfei Zhu
 
@@ -21,31 +21,46 @@ One problem I encountered in building my archive is that LinkedIn is a Dynamic W
 
 ## Is my data appropriate?
 
-I believe my data is appropriate to investigate the job market trend and it's updating really quick. The job information data on linedin is born-digital, which means
+I believe my data is appropriate to investigate the job market trend and it's updating really quick. For example, on Oct 18, 2021, there are 113,397 data scientist jobs in the United States and 7,420 data scientist jobs in Chicago. Each day, countless new jobs are posted and it has been used by both huge global companies such as Apple and Microsoft, but also small local companies. So it provides a lot of useful information. Other data sources could be Indeed and Glassdoor, but I would think LinkedIn is the largest job-seeking platform in the US. Established in 2002, at Mountain View of California, LinkedIn has served job seekers and hiring managers for more than 20 years and has become the leader in the job market. Young as it may be, but old enough in the internet era, I believe it could serve as a palimpsest of the job market in a time perspective (Bailey, 2007).
 
-## Transformation 
-
+Besides observing the long-time trend, my archive can also be used to catch the impact of a specific event, and therefore build event-based special collections (Rogers, 2019). 
 
 
 ## Temporal and Spatial Resolution
 
-To echo the content we learn from Large Scale Computing, I could set a scheduled task in Elastic Container Service to run the webscraping daily, last for a year, so I could find out if the number of jobs available has seasonal changes and yearly changes. For example, year 2020 is notoriously for job-seekers to land a job due to covid. 
+I would set my code to run daily, last for a year, so I could find out if the number of jobs available has seasonal changes and yearly changes. For example, the year 2020 is notoriously for job-seekers to land a job due to covid. To echo what we learn from Large Scale Computing, I could set a scheduled task in Elastic Container Service to run the web scraping codes. Because the web is dynamic, there is no traditional depth or layer here since what we need is to mimic the clicking and scrolling down actions of a human. But I would say it's two-layer: the first layer for searching results (company names and position names), the second layer for detailed job descriptions. (Brugger, 2018)
+
+The current archive is not big if I only scrape the titles and company names each day for the data scientist job in Chicago. So it's not very big data. However, if I include the job description data (which will be longer) and not limit my job only in Chicago and data scientist, it could be much bigger and can provide more insight into the trend in the job market. I can also conduct topic modeling in the job description. (Graham et al.)
+
+
+## Transformation of digitality
+
+The job information data on LinkedIn is born-digital. It is material that has never existed in any form other than digital since companies post their jobs solely online. Nowadays, most jobs are only posted online and there is no other format for these job openings. After scraping, they have been stored in my local machine as CSV files and their digitality has become reborn digitality. Reborn digital material is born-digital material that has been collected and preserved, and that has been changed in this process to such an extent that it is not identical to the born-digital material from which it was made (Brugger, 2018). 
+
+
+## Can this scraper last a long time?
+
+The website is making constantly changes. For example, `job-result-card__location` has been changed to `job-search-card__location` from March to October, and these kinds of small changes are hard to catch. Gradually, my code could breakdown when LinkedIn update their website and I would need to make constant adjustments to my code (Brugger, 2018). 
 
 
 ## Ethical Concerns
 
-While job descriptions are public data and can be accessed by everyone using the internet, do companies really want users to keep these data? While job-seekers post their names, job experience and education background online, as well as personal summaries, or even their resume and personal contact information. These cause increase ethical concerns
+While job descriptions are public data and can be accessed by everyone using the internet, do companies really want the public to keep these data? While job-seekers post their names, job experience, and education background online, as well as personal summaries, or even their resume and personal contact information, which increases ethical concerns. I think in my case when my targets are companies' names and job titles, the scraping tasks are not relevant to human, so it may be fine. However, if I decide to include users' profile data, including their images, summaries, and experience, this could invade their privacy and lead to ethical concerns. (Lomborg, 2019)
 
-## Can this crawler last a long time?
-
-The website is making constantly changes. For example, `job-result-card__location` has been changed to `job-search-card__location` from March to October, and this kind of small changes are hard to catch.
-
-Besides, LinkedIn has a `robots.txt` file that disallow all users to scrape its website, although we can apply to be added to its whitelist. In fact, many 
-
-
+Besides, LinkedIn has a `robots.txt` file that disallows all users to scrape its website, although we can apply to be added to its whitelist. In fact, many companies including `glassdoor`, `indeed`, and even `amazon` (when we discussed our scraping strategy in class, I didn't expect amazon disallows developers to scrape their listed products) have a `robots.txt` file to avoid scraping activities. 
 
 
 # Reference
+
+- Bailey 2007 "Time Perspectives, palimpsests and the archaeology of time"
+
+- Brugger 2018 The Archived Web
+
+- Rogers 2019 "Periodizing Web Archiving: Biographical, Event-Based, National and Autobiographical Traditions"
+
+- Graham et al. 2015 The Joys of Big Data for Historians
+
+- Lomborg 2019 "Ethical Considerations for Web Archives and Web History Research"
 
 - [Scrape Linkedin Guide](https://maoviola.medium.com/a-complete-guide-to-web-scraping-linkedin-job-postings-ad290fcaa97f)
 
